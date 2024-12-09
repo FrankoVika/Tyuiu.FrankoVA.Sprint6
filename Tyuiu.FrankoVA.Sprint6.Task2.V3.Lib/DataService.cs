@@ -16,10 +16,6 @@ namespace Tyuiu.FrankoVA.Sprint6.Task2.V3.Lib
             }
 
             
-            if (len > 6)
-            {
-                res[6] = 0.00;
-            }
 
             return res;
         }
