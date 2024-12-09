@@ -24,4 +24,4 @@ namespace Tyuiu.FrankoVA.Sprint6.Task2.V3.Lib
     }
 }
 
-//'https://github.com/AleevRuslan/Tyuiu.AleevRI.Sprint6/blob/master/Tyuiu.AleevRI.Sprint6.Task2.V3/FormMain.cs'
+//''

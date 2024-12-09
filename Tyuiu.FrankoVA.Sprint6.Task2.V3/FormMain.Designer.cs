@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             button1 = new Button();
             groupBox3 = new GroupBox();
             textBox2 = new TextBox();
@@ -41,11 +44,12 @@
             X = new DataGridViewTextBoxColumn();
             F = new DataGridViewTextBoxColumn();
             label3 = new Label();
-            richTextBox1 = new RichTextBox();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -124,12 +128,12 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(richTextBox1);
+            groupBox2.Controls.Add(chart1);
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Controls.Add(label3);
             groupBox2.Location = new Point(321, 18);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(475, 406);
+            groupBox2.Size = new Size(640, 406);
             groupBox2.TabIndex = 7;
             groupBox2.TabStop = false;
             groupBox2.Text = "Вывод данных";
@@ -167,19 +171,29 @@
             label3.TabIndex = 0;
             label3.Text = "Результат";
             // 
-            // richTextBox1
+            // chart1
             // 
-            richTextBox1.Location = new Point(165, 58);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(302, 324);
-            richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "";
+            chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(165, 26);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(469, 356);
+            chart1.TabIndex = 2;
+            chart1.Text = "chart1";
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(973, 450);
             Controls.Add(groupBox2);
             Controls.Add(button1);
             Controls.Add(groupBox3);
@@ -193,6 +207,7 @@
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
         }
 
@@ -211,6 +226,6 @@
         private Label label3;
         private DataGridViewTextBoxColumn X;
         private DataGridViewTextBoxColumn F;
-        private RichTextBox richTextBox1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
