@@ -31,7 +31,7 @@ namespace Tyuiu.FrankoVA.Sprint6.Task5.V22
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 5 выполнила студентка группы ИБКСб-24-1 Франко Виктория Алексеевна", "Сообщение");
+            MessageBox.Show("Таск 5 выполнила студентка группы ИБКСб-24-1 Франко Виктория", "Сообщение");
         }
 
         private void button3_Click(object sender, EventArgs e)
