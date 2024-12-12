@@ -18,12 +18,14 @@ namespace Tyuiu.FrankoVA.Sprint6.Task6.V7.Lib
                 string[] fragments;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    fragments = line.Split(' ');
-                    res += fragments.Length > 2 ? fragments[2] + " " : "";
+                    fragments = line.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (fragments.Length > 2)
+                    {
+                        res += fragments[2] + " ";
+                    }
                 }
             }
-            res = res.Trim();
-            return res;
+            return res.Trim();
         }
     }
 }
